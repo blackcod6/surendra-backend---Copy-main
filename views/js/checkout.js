@@ -33,7 +33,7 @@ function getCookie(name) {
         >Lace-Up Smash Sprint Badminton Shoes</small
     >
     </div>
-    <span class="text-body-secondary">$${element.price}</span>
+    <span class="text-body-secondary">${element.price*10}Rs</span>
 
 
     </li>

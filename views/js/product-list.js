@@ -60,7 +60,7 @@ let originalTitle = element.title;
                                        
                   
                                         <div class="product-div-price">
-                                        ${element.price + " Rs"}
+                                        ${element.price*10 + " Rs"}
                                         </div>   
                                         </div>
                                         <div class="cart-like">
@@ -237,7 +237,7 @@ function renderCart() {
               <h3>${item.title}</h3>
               <span class="quantity">1</span>
               <span class="multiply">x</span>
-              <span class="price">${item.price}rs</span>
+              <span class="price">${item.price*10}rs</span>
               <i class="fa-solid fa-trash" ></i>
             </div>`;
       console.log(item.image);

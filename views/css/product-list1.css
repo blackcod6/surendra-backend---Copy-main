@@ -77,14 +77,11 @@
 }
 
 .rating-price{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
     font-size: 1.9rem;
     gap: 2rem;
     left: 4.8rem;
-top: 27rem;
+    top: 31rem;
     
 }
 .rating-price i{
