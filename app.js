@@ -35,9 +35,9 @@ app.get("/", (req, res) => {
 app.get("/home", (req, res) => {
   res.render("home"); // Renders views/index.ejs
 });
-app.get("/account", (req, res) => {
-  res.render("account"); // Renders views/index.ejs
-});
+// app.get("/account", (req, res) => {
+//   res.render("account"); // Renders views/index.ejs
+// });
 
 app.get("/products", (req, res) => {
   res.render("productlist1"); // Renders views/index.ejs
@@ -54,7 +54,7 @@ app.get("/myaccount", (req, res) => {
 app.get("/productpage", (req, res) => {
   res.render("productpage"); // Renders views/index.ejs
 });
-app.get("/about", (req, res) => {
+app.get("/about us", (req, res) => {
   res.render("about"); // Renders views/index.ejs
 });
 app.get("/checkout", (req, res) => {
