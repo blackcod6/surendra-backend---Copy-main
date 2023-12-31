@@ -24,7 +24,7 @@
 
     <!-- header section starts  -->
         <header class="header">
-                <a href="#home.html" class="logo">VOUCHER CARD</a>
+                <a href="/home" class="logo">#HASHCART</a>
                 <form action="#" class="search-form">
                     <input type="search" placeholder="search anything" id="search-box">
                     <label for="search-box" class="ri-search-line"></label>
@@ -33,8 +33,8 @@
                     <div id="menu-btn" class="ri-menu-line"></div>
                     <div id="search-btn" class="ri-search-line"></div>
                     
+                    <!-- <div id="login-btn" class="ri-user-line"></div> -->
                     <div id="cart-btn" class="ri-shopping-cart-line"><p  id="count">0</p></div>
-                    <div id="login-btn" class="ri-user-line"></div>
                     <div class="ri-heart-line" id="like-btn"><p id="likecount">0</p></div>
 
                 </div>
@@ -88,8 +88,7 @@
         
         
         
-        <h3 class="total" id="liketotal">Total : <span> Rs</span> </h3>
-        <a href="#" class="checkoutbtn">checkout</a> 
+  
     </div>
     <!-- shopping cart end  -->
 
@@ -109,8 +108,13 @@
                   placeholder="Your Name"
                   name="myname"
                   id="idname"
+                  oninput="validateName()"
+                  maxlength="25"
                   required
                 />
+                
+
+
                 <img id="email" src="/mail-outline.svg" alt="" />
                 <input
                   type="email"
@@ -167,6 +171,7 @@
                   class="input-box"
                   placeholder="Password"
                   name="myloginpass"
+                 
                   required
                 />
                 <label id="remback">
@@ -187,31 +192,30 @@
     <!-- login form end  -->
 
 
-    <!-- product list container start -->
     <div class="product-container">
-        <div class="product-filter">
-            
-            <div class="filter">
-                <h1>Category Fliter</h1>
-                <div class="category">
-                  <!-- <label for=""><input type="checkbox" name="" id="checkicon">Mens</label>
-                  <label for=""><input type="checkbox" name="" id="">Mens</label>
-                  <label for=""><input type="checkbox" name="" id="">Mens</label>
-                  <label for=""><input type="checkbox" name="" id="">Mens</label>
-                  <label for=""><input type="checkbox" name="" id="">Mens</label> -->
-                </div>
-</div>
-            
-        <div class="product-sort">
-          <h1>Sort By</h1>
-          <select id="sort-select">
-              <option value="Default">Price: Default</option>
-              <option value="price-low-to-high">Price: Low to High</option>
-              <option value="price-high-to-low">Price: High to Low</option>
-              <!-- Add more options for different sorting criteria if needed -->
-          </select>
-            </div>
-        </div>
+      <div class="product-filter">
+          
+          <div class="filter">
+              <h1>Category Fliter</h1>
+              <div class="category">
+                <!-- <label for=""><input type="checkbox" name="" id="checkicon">Mens</label>
+                <label for=""><input type="checkbox" name="" id="">Mens</label>
+                <label for=""><input type="checkbox" name="" id="">Mens</label>
+                <label for=""><input type="checkbox" name="" id="">Mens</label>
+                <label for=""><input type="checkbox" name="" id="">Mens</label> -->
+              </div>
+          </div>
+          
+      <div class="product-sort">
+        <h1>Sort By</h1>
+        <select id="sort-select">
+            <option value="Default">Price: Default</option>
+            <option value="price-low-to-high">Price: Low to High</option>
+            <option value="price-high-to-low">Price: High to Low</option>
+            <!-- Add more options for different sorting criteria if needed -->
+        </select>
+      </div>
+      </div>
         
 
 
@@ -229,7 +233,9 @@
                         2000RS
                     </div>
                     <div class="cart-like">
-                    <button class="cart-like-btn" id="likebtn"> <i class="ri-heart-line"></i></button>
+                    <button class="cart-like-btn" id="likebtn"> <i class="ri-heart-fill"></i></button>
+
+
                     <button class="cart-like-btn" id="cartbtn">  <i class="ri-shopping-cart-2-fill"></i></button>
                     </div>
                 </div>
@@ -256,55 +262,54 @@
 
     <!-- footer section start  -->
     
-     <section class="footer">
+    <section class="footer">
       <div class="box-container">
         <div class="box">
-          <h3>quick links</h3>
+          <h3>Quick links</h3>
           <a href="/home"><i class="ri-arrow-right-line">Home</i></a>
-          <a href="/products"><i class="ri-arrow-right-line">products</i></a>
-          <a href="/about"><i class="ri-arrow-right-line">about</i></a>
-       
+          <a href="/products"><i class="ri-arrow-right-line">Products</i></a>
+          <a href="/about"><i class="ri-arrow-right-line">About</i></a>
+          <a href="/contact"><i class="ri-arrow-right-line">Contact</i></a>
           
-          <a href="/contact"><i class="ri-arrow-right-line">contact</i></a>
-        </div>
-        <div class="box">
-          <h3>quick links</h3>
-          <a href="/products"><i class="ri-arrow-right-line">my order</i></a>
-          <a href="/products" id="wishlisthomefooter"><i class="ri-arrow-right-line">my wishlist</i></a>
-          <a href=""><i class="ri-arrow-right-line">my account</i></a>
           
-          <a href=""><i class="ri-arrow-right-line">terms of user</i></a>
         </div>
         <div class="box">
-          <h3>quick links</h3>
-          <a href="#"><i class="ri-facebook-fill">Facebook</i></a>
-          <a href="#"><i class="ri-twitter-fill">twitter</i></a>
-          <a href="#"><i class="ri-instagram-fill">instagram</i></a>
-          <a href="#"><i class="ri-linkedin-box-fill">linkedin</i></a>
-          <a href="#"><i class="ri-pinterest-fill">pinterest</i></a>
-          <a href="#"><i class="ri-messenger-fill">messenger</i></a>
-         
+          <h3>My Section</h3>
+          <a id="footermycart" href="#"><i class="ri-arrow-right-line">My cart</i></a>
+          <a href="#" id="footerwishlist" ><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="/myaccount"><i class="ri-arrow-right-line">My account</i></a>
+          
+          <a href="#"><i class="ri-arrow-right-line">Terms of user</i></a>
         </div>
         <div class="box">
-          <h3>newsletter</h3>
-          <p>subscribe for latest updates</p>
+          <h3>Social Media</h3>
+          <a href="#"><i class="ri-facebook-fill"> Facebook</i></a>
+          <a href="#"><i class="ri-twitter-fill"> Twitter</i></a>
+          <a href="#"><i class="ri-instagram-fill"> Instagram</i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"> Linkedin</i></a>
+          <a href="#"><i class="ri-pinterest-fill"> Pinterest</i></a>
+          <a href="#"><i class="ri-messenger-fill"> Messenger</i></a>
+        </div>
+        <div class="box">
+          <h3>Newsletter</h3>
+          <p>Subscribe for latest updates</p>
           <form action="#">
-            <input type="email" name="" placeholder="Enter your email" id="">
+            <input type="email" name="" placeholder="Enter your email" id="" />
             <button type="button" class="sum-btn">Subscribe</button>
           </form>
-        </div>  
+        </div>
       </div>
     </section>
     <section class="credit">
-      Created by Code with Surendra Kumar || all rights reserved!
-    </section> 
+      CREATED BY IETIANS || All Right Reserved!
+    </section>
     <!-- footer section end  -->
    <!-- <iframe src="/footer.html" width="100%" height="100%" frameborder="0" scrolling="yes"></iframe> -->
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
     <script src="js/loginscript.js"></script>
-    <script src="/js/product-list.js"></script>
+    <script src="js/product-list.js"></script>
 
 
 

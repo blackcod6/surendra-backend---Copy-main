@@ -4,17 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account</title>
+
+  
+   <!-- remix icon cdn link  -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="css/myaccount.css" />
+    <link rel="stylesheet" href="css/home.css">
   </head>
   <body>
+
+
+
+    
+        <!-- header section starts  -->
+        <header class="header">
+          <a href="/home" class="logo"
+            ><i></i>#HASHCART</a
+          >
+          <form action="#" class="search-form">
+            <input type="search" placeholder="search anything" id="search-box"/>
+            <label for="search-box" class="ri-search-line"></label>
+          </form>
+          <div class="icons">
+            <div id="menu-btn" class="ri-menu-line"></div>
+            <div id="search-btn" class="ri-search-line"></div>
+            <div id="cart-btn" class="ri-shopping-cart-line"><p id="count">0</p></div>
+            <div class="ri-heart-line" id="like-btn"><p id="likecount">0</p></div>
+            <!-- <div id="login-btn" class="ri-user-line"></div> -->
+          </div>
+        </header>
+
+         <!-- header section ends  -->
+
+    <!-- closer btn  -->
+    <div id="closer" class="ri-close-line"></div>
+
+    <!-- navbar start  -->
+
+    <div class="navbar">
+      <a href="home.html">Home</a><a href="/about">about us</a><a href="/products">products</a><a href="/contact">Contact us</a>
+    </div>
+
+
+    <!-- navbar end  -->
+
+    <!-- shopping cart start  -->
+
+    <div class="shopping-cart"  >
+
+
+
+        <div class="shopping-cart1" id="addingtothecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
+        </div>
+        
+        <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+        <a href="#" class="checkoutbtn">Checkout</a> 
+    </div>
+
+
+ <div class="like-cart"  >
+
+        <div class="like-cart1" id="addingtothelikecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
+        </div>        
+        
+      
+        <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+        <a href="#" class="checkoutbtn">checkout</a> 
+    </div>
+
+    <!-- shopping cart end  -->
+
+
+    
+<!-- Account page -->
+<div class="Account">
+  <a href="/myaccount">My Account</a>
+  <a href="/home">My Orders</a>
+  <a href="/products">My Wishlist</a>
+
+   <form action="/home" method="post">
+      <button type="submit">Sign Out</button>
+  </form>
+
+</div>
+
+<!-- Account page ends -->
+
+  <!-- my account start -->
     <div class="a-container">
       <h1> My Account</h1>
-
 
       
       <div class="a-section">
 
-        <div class="card">
+        <div class="account-card">
           <div class="a-img">
             <img src="/image/a-img1.png" alt="" />
 
@@ -25,7 +114,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="account-card">
           <div class="a-img">
             <img src="/image/a-img2.png" alt="" />
 
@@ -36,7 +125,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="account-card">
           <div class="a-img">
             <img src="/image/a-img3.png" alt="" />
 
@@ -47,7 +136,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="account-card">
           <div class="a-img">
             <img src="/image/a-img4.png" alt="" />
 
@@ -58,7 +147,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="account-card">
           <div class="a-img">
             <img src="/image/a-img5.png" alt="" />
 
@@ -69,7 +158,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="account-card">
           <div class="a-img">
             <img src="/image/a-img6.png" alt="" id="image-6" />
 
@@ -81,6 +170,50 @@
         </div>
       </div>
     </div>
+
+
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="/home"><i class="ri-arrow-right-line">Home</i></a>
+          <a href="/products"><i class="ri-arrow-right-line">Products</i></a>
+          <a href="/about"><i class="ri-arrow-right-line">About</i></a>
+          <a href="/contact"><i class="ri-arrow-right-line">Contact</i></a>
+          
+          
+        </div>
+        <div class="box">
+          <h3>My Section</h3>
+          <a href="#"><i class="ri-arrow-right-line">My cart</i></a>
+          <a href="#" id="wishlisthomefooter" ><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="/myaccount"><i class="ri-arrow-right-line">My account</i></a>
+          
+          <a href="#"><i class="ri-arrow-right-line">Terms of user</i></a>
+        </div>
+        <div class="box">
+          <h3>Social Media</h3>
+          <a href="#"><i class="ri-facebook-fill"> Facebook</i></a>
+          <a href="#"><i class="ri-twitter-fill"> Twitter</i></a>
+          <a href="#"><i class="ri-instagram-fill"> Instagram</i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"> Linkedin</i></a>
+          <a href="#"><i class="ri-pinterest-fill"> Pinterest</i></a>
+          <a href="#"><i class="ri-messenger-fill"> Messenger</i></a>
+        </div>
+        <div class="box">
+          <h3>Newsletter</h3>
+          <p>Subscribe for latest updates</p>
+          <form action="#">
+            <input type="email" name="" placeholder="Enter your email" id="" />
+            <button type="button" class="sum-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="credit">
+      CREATED BY IETIANS || All Right Reserved!
+    </section>
 
   </body>
 </html>

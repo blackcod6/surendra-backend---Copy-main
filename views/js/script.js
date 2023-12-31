@@ -6,8 +6,9 @@ closer.onclick = () => {
     navbar.classList.remove('active'); 
     cart.classList.remove('active'); 
     login.classList.remove('active'); 
-    likelist.classList.remove('active'); 
-    likelist1.classList.remove('active'); 
+    likelist.classList.remove('active');
+    
+    // likelist1.classList.remove('active'); 
 }
 let navbar = document.querySelector('.navbar');
 
@@ -24,6 +25,24 @@ document.querySelector('#cart-btn').onclick = () => {
     cart.classList.toggle("active");
 };
 
+document.querySelector('#footermycart').onclick = () => {
+    closer.style.display = "block";
+    cart.classList.toggle("active");
+};
+
+
+let likelist = document.querySelector(".like-cart");
+document.querySelector("#like-btn").onclick = () => {
+  closer.style.display = "block";
+  likelist.classList.toggle("active");
+};
+
+
+
+document.querySelector("#footerwishlist").onclick = () => {
+  closer.style.display = "block";
+  likelist.classList.toggle("active");
+};
 
 
 
@@ -33,16 +52,15 @@ document.querySelector('#login-btn').onclick = () => {
     login.classList.toggle("active");
 }
 
-let likelist = document.querySelector('.like-cart');
-document.querySelector("#like-btn").onclick = () => {
-  closer.style.display = "block";
-  likelist.classList.toggle("active");
-};
-let likelist1 = document.querySelector('.like-cart');
-document.querySelector("#wishlisthomefooter").onclick = () => {
-  closer.style.display = "block";
-  likelist.classList.toggle("active");
-};
+
+
+
+// let account = document.querySelector(".Account");
+// document.querySelector("#login-btn").onclick = () => {
+//   closer.style.display = "block";
+//   // login.classList.toggle("active");
+//   account.classList.toggle("active");
+// };
 
 
 let searchForm = document.querySelector('.header .search-form');

@@ -21,7 +21,7 @@ body {
 }
 
 html {
-    font-size: 50.5%;
+    font-size: 57.5%;
     overflow-x: hidden;
 }
 
@@ -38,7 +38,7 @@ html::-webkit-scrollbar-thumb {
 } 
 
 section {
-    padding: 3rem 9%;
+    padding: 0 9%;
 }
 
 ::selection {
@@ -321,6 +321,8 @@ section {
     -webkit-box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
     box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
     transition: 0.5s linear;
+    height: 43vh;     /*change*/
+    width: 25rem;
 }
 .navbar a{
     margin: 1rem 0;
@@ -626,17 +628,17 @@ section {
 /* login form start */
 .login-form{
     position: fixed;
-    top: 5px;
-    /* bottom: 0%; */
+    top: 1rem;
+    
     right: -100%;
-    /* right: 0; */
+    
     height: 100vh;
     z-index: 1000;
-    width: 55rem;
+    width: 50rem;
     background: #f0e8e4;
     padding: 2rem;
-    /* padding-top: 8rem; */
-    overflow-y: scroll;
+   
+   
     
     margin: 1%;
     border-radius: 4rem;
@@ -658,42 +660,24 @@ section {
     /* -webkit-box-shadow: 0 0 0 100vw rgba(0,0,0,0.5); */
     box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
     transition: 0.5s linear;
+    height: 86vh;      /* change */
 }
 
 
 .container{
     position: absolute;
-    top: 1%;
-    left: 10%;
-    width: 45%;
-    height: 100vh;
-    /* font-family: sans-serif; */
-    /* background-image: url(/TEST1.jpg); */
-    /* background-position:bottom ; */
-    /* background-size: cover; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    top: -2%;
     
-    /* margin: 100px; */
-    @media screen and (max-width: 600px)  {
-        width: 10%;
-        height: 100vh;
-    /* font-family: sans-serif; */
-    /* background-image: url(/TEST1.jpg);
-    background-position:center ;
-    background-size: cover; */
-    /* display: flex; */
-    /* height: 50%; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    }
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    
 }
 
 .card{
     position: absolute;
     top: 5%;
-    left: 5%;
+    /* left: 5%; */
     background: black;
     background: transparent;
     width: 420px;
@@ -914,7 +898,7 @@ form #forgot{
 
 .footer{
     
-    margin: 2%;
+    margin: 10rem 4rem 0rem 4rem;
     border-radius: 3rem;
     background: #f0e8e4;
    
@@ -1001,6 +985,7 @@ form #forgot{
     margin: 2%;
     border-radius: 3rem;
     background-color: #f0e8e4;
+    height: 95vh;
 
 }
 
@@ -1044,6 +1029,7 @@ form #forgot{
     color: #b58d7e;
     padding: 0.5rem 0;
     line-height: 2;
+    margin-bottom: 2rem;
 }
 
 
@@ -1055,7 +1041,7 @@ form #forgot{
 }
 
 .home .slides-container .slide .image img{
-    width: 100%;
+    width: 90%;
     animation: fadeout .4s linear;
 }
 
@@ -1151,7 +1137,7 @@ form #forgot{
 .list-items-card{
     /* width: 100%; */
     position: relative;
-   
+   margin: 0 4rem 0 5rem;
     display: flex;
     flex-wrap: wrap;
     width: 100%;

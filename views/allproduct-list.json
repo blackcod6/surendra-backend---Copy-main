@@ -1,15 +1,14 @@
 [
   {
     "id": 1,
-    "title": "new balance Men EVOZ Quartz Grey Running Shoes",
-    "price": 109,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "title": "Pomo-Z Men’s Casual Stylish Premium PU Leather Zip-Up Motorcycle Biker Bomber Jacket With a Removable Hood",
+    "price": 219,
+    "description": "Premium Durability: Crafted from high-quality PU materials, this jacket guarantees lasting comfort and wear.Versatile Chic: Whether it's a casual outing or outdoor adventure, this PU jacket offers warmth with a touch of style.",
     "category": "men's clothing",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61zT0sOYcSL._SY695_.jpg",
-    "smallimage1":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71AGVeFg2XL._SY695_.jpg",
-    "smallimage2":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/613ndYN8jxL._SY695_.jpg",
-    "smallimage3":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71+GCuGGvfL._SY695_.jpg",
-    
+    "image": "https://m.media-amazon.com/images/I/61ai5LJMmjL._SY741_.jpg",
+    "smallimage1": "https://m.media-amazon.com/images/I/61mNoD5CGML._SY741_.jpg",
+    "smallimage2": "https://m.media-amazon.com/images/I/61OkR65wXvL._SY741_.jpg",
+    "smallimage3": "https://m.media-amazon.com/images/I/61HRZIpsWRL._SY741_.jpg",
     "rating": { "rate": 3.9, "count": 120 }
   },
   {
@@ -181,6 +180,66 @@
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
     "category": "women's clothing",
     "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    "rating": { "rate": 3.6, "count": 145 }
+  },
+  {
+    "id": 21,
+    "title": "Apple iPad Air (5th Generation)",
+    "price": 750,
+    "description": "Apple iPad Air (5th Generation): with M1 chip, 10.9-inch Liquid Retina Display, 64GB, Wi-Fi 6, 12MP front/12MP Back Camera, Touch ID, All-Day Battery Life – Purple",
+    "category": "electronics",
+    "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61k05QwLuML._AC_SX466_.jpg",
+    "smallimage1":"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61Y39sE4nuL._AC_SX466_.jpg",
+    "smallimage2":"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81jlw8nEgJL._AC_SX466_.jpg",
+    "smallimage3":"https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61rVc5fKvVL._AC_SX466_.jpg",
+    "rating": { "rate": 3.6, "count": 145 }
+  },
+  {
+    "id": 22,
+    "title": "American Tourister Fizz 32 Ltrs Large Casual Backpack, Blue",
+    "price": 27,
+    "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+    "category": "others",
+    "image": "https://m.media-amazon.com/images/I/91pln4jN4GL._SY879_.jpg",
+    "smallimage1":"https://m.media-amazon.com/images/I/91jRxPGWsYL._SX466_.jpg",
+    "smallimage2":"https://m.media-amazon.com/images/I/91gstcLE6EL._SY679_.jpg",
+    "smallimage3":"https://m.media-amazon.com/images/I/91zpwJivrBL._SY741_.jpg",
+    "rating": { "rate": 3.6, "count": 145 }
+  },
+  {
+    "id": 23,
+    "title": "new balance Men EVOZ Quartz Grey Running Shoes",
+    "price": 200,
+    "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+    "category": "shoes",
+    "image": "https://m.media-amazon.com/images/I/61zT0sOYcSL._SY625_.jpg",
+    "smallimage1":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71AGVeFg2XL._SY695_.jpg",
+    "smallimage2":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/613ndYN8jxL._SY695_.jpg",
+    "smallimage3":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71+GCuGGvfL._SY695_.jpg",
+    "rating": { "rate": 3.6, "count": 145 }
+  },
+  {
+    "id": 24,
+    "title": "J B Fashion Hoodies || Hoodies for Unisex || Stylish Hoodies for Unisex || Hoodies for Stylish Under 500 (H-14-17) (2XL, Khakhi)",
+    "price": 599,
+    "description": "Style Point : Hoodie with Printed gives a trendy yet Casual look. Durable stitching and Quality finish makes this Product a must have this Winter.Occasion: Formal and Casual wear. The model in the image is wearing a \"medium\" size Hoodie. Please refer to the size chart to select your size.",
+    "category": "men's clothing",
+    "image": "https://m.media-amazon.com/images/I/716BF+nqr3L._SY741_.jpg",
+    "smallimage1":"https://m.media-amazon.com/images/I/713FRYxdmxL._SY741_.jpg",
+    "smallimage2":"https://m.media-amazon.com/images/I/919GSI25aWL._SY741_.jpg",
+    "smallimage3":"https://m.media-amazon.com/images/I/71qWnf1MGvL._SY741_.jpg",
+    "rating": { "rate": 3.6, "count": 145 }
+  },
+  {
+    "id": 25,
+    "title": "Pigeon by Stovekraft New Handy Mini Plastic Chopper with 3 Blades, Green (BPA FREE)",
+    "price": 12,
+    "description": "EFFICIENT AND MULTI-FUNCTIONAL:This handy manual food chopper lets you chop fruit, vegetables, herbs, nuts, and even ice. It will save you a lot of time in the kitchen and also works as a mincer and grinder for boneless meats and cottage cheese.You don't have to tear up any longer when chopping onions or endure the smell of garlic when you're done.",
+    "category": "others",
+    "image": "https://m.media-amazon.com/images/I/61CmFkuMsML._AC_SX569_.jpg",
+    "smallimage1":"https://m.media-amazon.com/images/I/51mz2kE4HcL._AC_.jpg",
+    "smallimage2":"https://m.media-amazon.com/images/I/61z99d71EDL._AC_SX569_.jpg",
+    "smallimage3":"https://m.media-amazon.com/images/I/61rQAikZQML._AC_SX569_.jpg",
     "rating": { "rate": 3.6, "count": 145 }
   }
 ]

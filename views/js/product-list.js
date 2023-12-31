@@ -1,6 +1,21 @@
 let productdiv = document.querySelector(".product-items-container");
+  
+
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const productcategory = urlParams.get("category");
+
+// Check if productId is not null and fetch product details
+
+
+
+
+
+
 let addcart = [];
 let cartbtn = document.getElementById("cartbtn");
+let card1 = document.getElementById('card1');
 
 let categorylist = document.querySelector(".category");
 let allCat = [];
@@ -12,11 +27,14 @@ let displayproduct = async (allcheckcat = []) => {
   let finalproduct = await product.json();
 const sortSelect = document.getElementById("sort-select");
   const selectedSort = sortSelect.value;
-  console.log(selectedSort.value);
+  console.log(selectedSort);
 
   // Sort the products based on the selected criteria
   if (selectedSort === "Default") {
-    
+    // if (card1.) {
+      
+    // }
+    // displayproducthome("electronics");
   } else if (selectedSort === "price-low-to-high") {
     finalproduct.sort((a, b) => a.price - b.price);
   } else if (selectedSort === "price-high-to-low") {
@@ -32,7 +50,7 @@ const sortSelect = document.getElementById("sort-select");
       allcheckcat = allCat;
     }
     if (allcheckcat.includes(element.category)) {
-let originalTitle = element.title;
+      let originalTitle = element.title;
       function truncateString(inputString, words) {
         // Split the string into an array of words
         const wordArray = inputString.split(' ');
@@ -85,6 +103,12 @@ let originalTitle = element.title;
 
 
 
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const sortSelect = document.getElementById("sort-select");
 
@@ -111,7 +135,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+// checkdata.push("men's clothing");
+// displayproduct(checkdata);
 let categoryfilter = () => {
   let checkinput = document.querySelectorAll("#checkicon");
   let checkdata = [];
@@ -123,6 +148,8 @@ let categoryfilter = () => {
 
   displayproduct(checkdata);
 };
+
+
 
 function addtocart(productId) {
   fetch("allproduct-list.json")
@@ -231,26 +258,28 @@ function renderCart() {
       let shoppingcartitem = document.createElement("div");
       shoppingcartitem.classList.add("box");
       shoppingcartitem.innerHTML += `
+       <a href="productpage?id=${item.id}">
           <i class="ri-close-line close-icon"onclick="removeFromCart(${index})"></i>
           <img src=${item.image}>
             <div class="content">
               <h3>${item.title}</h3>
-              <span class="quantity">1</span>
+              <span  class="quantity"><input style="width: 4rem"; type="number" value="1"name="" id="itemquantity"></span>
               <span class="multiply">x</span>
-              <span class="price">${item.price*10}rs</span>
-              <i class="fa-solid fa-trash" ></i>
-            </div>`;
+              <span class="price">${item.price * 10}rs</span>
+              
+            </div>
+            </a>`;
       console.log(item.image);
       shoppingcart.appendChild(shoppingcartitem);
-      total += item.price;
+      total += item.price*10;
     });
   }
   totalElement.textContent = `${total} rs`;
 }
 function removeFromCart(index) {
   addcart.splice(index, 1);
-  renderCart();
   setCookie('addcart', addcart, 7);
+  renderCart();
 }
 
 let likecart = [];
@@ -275,7 +304,7 @@ function addtolike(productId) {
         // Product not in the cart, add it
         // likecart = [];
         likecart.push(selectedProduct);
-
+        setCookie("likecart", likecart, 7);
         // Update the UI to display the cart items
         renderlikeCart();
       }
@@ -307,6 +336,7 @@ function renderlikeCart() {
       let likingcartitem = document.createElement("div");
       likingcartitem.classList.add("box");
       likingcartitem.innerHTML += `
+       <a href="productpage?id=${item.id}">
           <i class="ri-close-line close-icon" onclick="removeFromlikeCart(${index})" ></i>
           <img src=${item.image}>
             <div class="content">
@@ -315,16 +345,71 @@ function renderlikeCart() {
               <span class="multiply">x</span>
               <span class="price">${item.price}rs</span>
               
-            </div>`;
-      console.log(item.image);
+            </div>
+            </a>`;
+      
       likingcart.appendChild(likingcartitem);
-      total += item.price;
+     
     });
   }
-  totalElement.textContent = `${total}`;
+  
 }
 function removeFromlikeCart(index) {
   likecart.splice(index, 1);
+  setCookie("likecart", likecart, 7);
   renderlikeCart();
 }
-displayproduct();
+
+
+
+window.addEventListener("load", () => {
+  const likeData = getCookie("likecart");
+
+  // Check if cartData exists and update the addcart variable accordingly
+  if (likeData) {
+    likecart = likeData;
+    renderlikeCart(); // Update the cart UI when the page loads
+  }
+});
+
+
+
+if (productcategory) {
+  // productcategory = productcategory.trim();
+  displayproduct(productcategory.trim());
+} else {
+  
+  displayproduct();
+}
+
+
+
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

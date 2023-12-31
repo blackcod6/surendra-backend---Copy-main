@@ -1,6 +1,7 @@
 
 let idconfirmpassword = document.getElementById("idconfirmpassword");
 let idpassword = document.getElementById("idpassword");
+let idname = document.getElementById("idname");
 
 var card = document.getElementById("card");
 function openregister() {
@@ -41,4 +42,15 @@ function validata() {
     return true;
   }
   
+}
+
+function validateName() {
+  // Remove non-alphabetic characters
+  idname.value = idname.value.replace(/[^A-Za-z\s]/g, '');
+
+  // You can also display a message or disable the idname if needed
+  // For example, show a message if the user enters a number
+  if (/\d/.test(idname.value)) {
+    alert('Numbers are not allowed in the name field.');
+  }
 }

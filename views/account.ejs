@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Account</title>
 
     <!-- remix icon cdn link  -->
     <link
@@ -19,8 +19,8 @@
     />
 
     <!-- custom css file link  -->
-    <!-- <link rel="stylesheet" href="home.css" /> -->
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="./css/account.css" />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
 
   <body>
@@ -43,7 +43,6 @@
      
       </div>
     </header>
-
     <!-- header section ends  -->
 
     <!-- closer btn  -->
@@ -52,34 +51,44 @@
     <!-- navbar start  -->
 
     <div class="navbar">
-      <a href="/home">Home</a>
-      <a href="/products">Products</a>
-      <a href="/about">About  Us</a>
-      <a href="/contact">Contact Us</a>
-      
+      <a href="home.html">Home</a><a href="/about">about us</a><a href="/products">products</a><a href="/contact">contact us</a>
     </div>
 
     <!-- navbar end  -->
 
     <!-- shopping cart start  -->
- <div class="shopping-cart"  >
+
+    <div class="shopping-cart"  >
 
 
 
         <div class="shopping-cart1" id="addingtothecart">
           <p style="font-size: 2rem;">Your cart is empty</p>
         </div>
+       
+       
+        
+        
+        
         
         <h3 class="total" id="total">Total : <span> Rs</span> </h3>
         <a href="#" class="checkoutbtn">checkout</a> 
     </div>
+
+
+
 
 
  <div class="like-cart"  >
 
+
+
         <div class="like-cart1" id="addingtothelikecart">
           <p style="font-size: 2rem;">Your cart is empty</p>
-        </div>    
+        </div>
+       
+       
+        
         
         
         
@@ -87,113 +96,35 @@
         <a href="#" class="checkoutbtn">checkout</a> 
     </div>
 
-
     <!-- shopping cart end  -->
 
-    <!-- login form start  -->
-    <div class="login-form">
-      <div class="container">
-        <div class="card">
-          <div class="inner-box" id="card">
-            <div class="card-front">
-              <h1>SIGN UP</h1>
-              <form action="/signup" method="post" >
-                <img id="name" src="/name.png" alt="" />
-                <input
-                  type="text"
-                  class="input-box"
-                  placeholder="Your Name"
-                  name="myname"
-                  id="idname"
-                  oninput="validateName(this)"
-                  minlength="5"
-                  maxlength="32"
-                  required
-                />              
-
-
-                <img id="email" src="/mail-outline.svg" alt="" />
-                <input
-                  type="email"
-                  class="input-box"
-                  placeholder="Email"
-                  name="myemail"
-                  id="idEmail"
-                  title="syntax is of type-surendra6666@gmail.com"
-                  onkeyup="valiemail()"
-                  required
-                />
-                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
-                
-                <input
-                  type="password"
-                  class="input-box"
-                  placeholder="Password"
-                  name="mypassword"
-                  id="idpassword"
-                  minlength="8"
-                  maxlength="16"
-                  required
-                />
-                <img id="pass2" src="/lock-closed-outline.svg" alt="" />
-                <input
-                  type="password"
-                  class="input-box"
-                  placeholder="Confirm Password"
-                  name="myconfirmpassword"
-                  id="idconfirmpassword"
-                  minlength="8"
-                  maxlength="16"
-                  required
-                />
-                <label id="rem">
-                  <input type="checkbox" /><span>Remember Me</span>
-                </label>
-                <a href="#" id="forgot">Forgot Password</a>
-                <button type="submit" onclick="openlogin()"  class="sumbit-btn" onclick=" return validata()">Sumbit</button>
-                <span id="accountregister"> Have an account </span>
-                <button type="button" class="btn" onclick="openlogin()" >
-                  Log In
-                </button>
-              </form>
-            </div>
-            <div class="card-back">
-              <h1>LOGIN</h1>
-              <form action="/account"   method="post">
-                <img id="email" src="/mail-outline.svg" alt="" />
-                <input
-                  type="email"
-                  class="input-box"
-                  placeholder="Email"
-                  name="myloginemail"
-                  required
-                />
-                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
-                <input
-                  type="password"
-                  class="input-box"
-                  placeholder="Password"
-                  name="myloginpass"
-                  required
-                />
-                <label id="remback">
-                  <input type="checkbox" /><span>Remember Me</span>
-                </label>
-                <a href="#" id="forgot">Forgot Password</a>
-                <button type="submit" class="sumbit-btn">Sumbit</button>
-                <span id="accountregister">Dont have a account </span>
-                <button type="button" onclick="openregister()" class="btn">
-                  Register Now
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
     <!-- login form end  -->
-   
+
+
+
+
+<!-- Account page -->
+<div class="Account">
+    <a href="/myaccount">My Account</a>
+    <a href="/home">My Orders</a>
+    <a href="/products">My Wishlist</a>
+
+     <form action="/home" method="post">
+        <button style=" margin: 1rem 0; font-size: 2.5rem; color: #5e473e; background: transparent; cursor: pointer;" type="submit">Sign Out</button>
+    </form>
+
+ </div>
+
+<!-- Account page ends -->
+
+
+
+
+
+
+
     <!-- home section starts  -->
 
     <section class="home">
@@ -208,7 +139,7 @@
               Sweatshirt for Men
             </p>
             <br />
-            <a href="/productpage?id=24" class="shop-btn">shop now</a>
+            <a href="#" class="shop-btn">shop now</a>
           </div>
           <div class="image">
             <!-- <img src="image/home-img-1.png" alt=""> -->
@@ -225,7 +156,7 @@
               Effortlessly Chopping Vegetables and Fruits for Your Kitchen
               (Green, 400 ml, 12420)
             </p>
-            <a href="/productpage?id=25" class="shop-btn">shop now</a>
+            <a href="#" class="shop-btn">shop now</a>
           </div>
           <div class="image">
             <img src="image/kitchen1.png" alt="" />
@@ -246,7 +177,7 @@
         <div class="content">
           <span>limited offer</span>
           <h3>upto 50% off</h3>
-          <a href="/productpage?id=21" class="shop-btn">shop now</a>
+          <a href="#" class="shop-btn">shop now</a>
         </div>
       </div>
       <div class="banner">
@@ -254,7 +185,7 @@
         <div class="content">
           <span>limited offer</span>
           <h3>upto 50% off</h3>
-          <a href="/productpage?id=22" class="shop-btn">shop now</a>
+          <a href="#" class="shop-btn">shop now</a>
         </div>
       </div>
       <div class="banner">
@@ -262,7 +193,7 @@
         <div class="content">
           <span>limited offer</span>
           <h3>upto 50% off</h3>
-          <a href="/productpage?id=23" class="shop-btn">shop now</a>
+          <a href="#" class="shop-btn">shop now</a>
         </div>
       </div>
     </section>
@@ -274,7 +205,7 @@
 
     <div class="list-items-card">
       <div class="card">
-        <a id="card1" href="/products?category=electronics">
+        <a href="about.html">
           <img src="/image/mobile.jpg" class="card-img-top" alt="..." />
 
           <h5 class="card-title">Mobiles & Accessories</h5>
@@ -282,28 +213,28 @@
       </div>
       
       <div class="card">
-        <a href="/products?category=others">
+        <a href="about.html">
           <img src="/image/kitchen.jpg" class="card-img-top" alt="..." />
   
           <h5 class="card-title">Home & Kitchen</h5>
         </a>
       </div>
       <div class="card">
-        <a href="/products?category=women%27s%20clothing+men%27s%20clothing">
+        <a href="about.html">
           <img src="/image/clothes.jpg" class="card-img-top" alt="..." />
   
           <h5 class="card-title">Clothing  & Accessories</h5>
         </a>
       </div>
       <div class="card">
-        <a href="/products?category=jewelery">
+        <a href="about.html">
           <img src="/image/cosmetics.jpg" class="card-img-top" alt="..." />
   
           <h5 class="card-title">Women's fashion & Cosmetics</h5>
         </a>
       </div>
       <div class="card">
-        <a href="/products?category=shoes">
+        <a href="about.html">
           <img src="/image/shoes1.jpg" class="card-img-top" alt="..." />
   
           <h5 class="card-title">Shoes  <br> Sports & Formals</h5>
@@ -359,8 +290,10 @@
     <!-- footer section end  -->
 
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/account.js"></script>
     <script src="js/loginscript.js"></script>
     <script src="js/product-list.js"></script>
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>

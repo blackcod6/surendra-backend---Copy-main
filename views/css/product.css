@@ -18,11 +18,13 @@ html{
 
 .product-page .left-div .mainimage{
     width: 100%;
+    /* border-radius: 2rem; */
 }
 .product-page .left-div .mainimage img{
     width: 100%;
     margin: 3rem 0rem 0rem 4rem;
     height: 32rem;   
+    border-radius: 2rem;
 }
 
 .left-div .small-image{
@@ -38,8 +40,8 @@ html{
     position: relative;
     /* background: rebeccapurple; */
     width:10rem;
-    height: 10rem;
-    margin-top: 1rem;
+    height: 12rem;
+    margin-top: 2rem;
 }
 .left-div .small-image .sub-image img{
     position: absolute;
@@ -89,10 +91,13 @@ html{
 
 .pro-content #productprice{
   color: #5e473e;
+  font-size: 3rem;
+  margin-top: 2rem;
 }
 
 .pro-content #shoe-heading{
   color: #6b5045;
+  margin-bottom: 1rem;
 }
 
 .pro-content #details-heading{

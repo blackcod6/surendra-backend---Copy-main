@@ -45,7 +45,7 @@ app.get("/products", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact"); // Renders views/index.ejs
 });
-app.get("/myaccount", (req, res) => {
+app.get("/account", (req, res) => {
   res.render("myaccount"); // Renders views/index.ejs
 });
 app.get("/myaccount", (req, res) => {
@@ -54,7 +54,7 @@ app.get("/myaccount", (req, res) => {
 app.get("/productpage", (req, res) => {
   res.render("productpage"); // Renders views/index.ejs
 });
-app.get("/about us", (req, res) => {
+app.get("/about", (req, res) => {
   res.render("about"); // Renders views/index.ejs
 });
 app.get("/checkout", (req, res) => {
@@ -92,7 +92,10 @@ app.post("/signup", async (req, res) => {
     data.confirmpassword = hashedconfirmpassword;
     const userdata = await collection.insertMany(data);
     console.log(userdata);
-    res.render("home");
+   
+    
+    
+    
   }
 });
 

@@ -16,6 +16,8 @@
     position: absolute;
     width: 100%;
     padding: 2rem;
+    left: 2rem;
+    top: 13rem;
 }
 .filter label{
     display: block;
@@ -33,6 +35,7 @@
 
 .product-right-container{
     width: 75%;
+    margin-right: 2rem;
 }
 .product-items-container{
     width: 100%;
@@ -107,26 +110,50 @@
     border-radius: 50%;
 }
 
+
+
+
+/* change */
+/* #likebtn .active{
+    color: red;
+}
+
+#likebtn :target{
+    color: red;
+} */
+
+
+
+.cart-like-btn:active {
+    color: red; /* Set your clicked color here */
+  }
+
 .product-sort{
     position: relative;
-    top: 40rem;
-    left: 2rem;
+    top: 2rem;
+    margin: 2rem;
 }
-/*
+
+#sort-select {
+    width: 17rem;
+}
 
 
-@media screen and (max-width: 420px){
+ @media screen and (max-width: 425px){
     .product-items-container{
     width: 120%;
 }
 .product-filter{
     width: 0;
     padding: 0;
+    
 }
-} */
-/* @media screen and (max-width:597) {
+
+
+} 
+@media screen and (max-width:597) {
     .product-right-container {
         
         margin: 6rem;
 }
-} */
+}

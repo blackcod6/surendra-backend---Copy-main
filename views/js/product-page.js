@@ -47,7 +47,7 @@ async function displayProductDetails(productId) {
     // Modify this part according to your HTML structure
     document.getElementById("shoe-heading").innerText = selectedProduct.category;
     document.getElementById("producttitle").innerText = selectedProduct.title;
-    document.getElementById("productprice").innerText = selectedProduct.price*100+" Rs";
+    document.getElementById("productprice").innerText = selectedProduct.price*10+" Rs";
     document.getElementById("productdetails").innerText = selectedProduct.description;
   document.getElementById("ProductImg").src = selectedProduct.image;
   document.getElementById("si1").src = selectedProduct.smallimage1;
@@ -94,13 +94,58 @@ function addtocart(productId) {
             } else {
                 // Product not in the cart, add it
                 addcart.push(selectedProduct);
-
+                setCookie("addcart", addcart, 7);
                 // Update the UI to display the cart items
                 renderCart();
             }
         })
         .catch((error) => console.error("Error fetching data:", error));
 }
+
+
+
+
+
+
+function getCookie(name) {
+  const cookies = document.cookie.split(";").map((cookie) => cookie.trim());
+  for (const cookie of cookies) {
+    if (cookie.startsWith(name)) {
+      return JSON.parse(cookie.split("=")[1]);
+    }
+  }
+  return null;
+}
+
+function setCookie(name, value, days) {
+  const expires = new Date(
+    Date.now() + days * 24 * 60 * 60 * 1000
+  ).toUTCString();
+  document.cookie = `${name}=${JSON.stringify(
+    value
+  )};expires=${expires};path=/`;
+}
+
+// Retrieve cart data from the cookie when loading the page
+window.addEventListener("load", () => {
+  const cartData = getCookie("addcart");
+
+  // Check if cartData exists and update the addcart variable accordingly
+  if (cartData) {
+    addcart = cartData;
+    renderCart(); // Update the cart UI when the page loads
+  }
+});
+
+
+
+
+
+
+
+
+
+
 
 // ... Other code ...
 function renderCart() {
@@ -133,8 +178,8 @@ function renderCart() {
               <h3>${item.title}</h3>
               <span class="quantity">1</span>
               <span class="multiply">x</span>
-              <span class="price">${item.price}rs</span>
-              <i class="fa-solid fa-trash" ></i>
+              <span class="price">${item.price*10}rs</span>
+              
             </div>`;
       console.log(item.image);
       shoppingcart.appendChild(shoppingcartitem);
@@ -145,5 +190,6 @@ function renderCart() {
 }
 function removeFromCart(index) {
   addcart.splice(index, 1);
+     setCookie("addcart", addcart, 7);
   renderCart();
 }

@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <!-- <link rel="stylesheet" href="/New folder/home.css" /> -->
-    <link rel="stylesheet" href="css/aboutcss.css" />
+     <!-- remix icon cdn link  -->
+     <link
+     href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+     rel="stylesheet"
+   />
+
+   <!-- font awesome cdn link  -->
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+   />
+   <!-- css file -->
+   <link rel="stylesheet" href="css/aboutcss.css">
+   <link rel="stylesheet" href="css/home.css">
   </head>
   <body>
-
-
+    <!-- header section starts  -->
     <header class="header">
-      <a href="/home" class="logo" style="text-decoration: none"
-        ></i>VOUCHER CARD</a
+      <a href="/home" class="logo"
+        ></i>#HASHCART</a
       >
       <form action="#" class="search-form">
         <input type="search" placeholder="search anything" id="search-box" />
@@ -26,46 +33,208 @@
         <div id="menu-btn" class="ri-menu-line"></div>
         <div id="search-btn" class="ri-search-line"></div>
         <!-- <div id="cart-btn" class="ri-shopping-cart-line">0</div>  -->
+        <!-- <div id="login-btn" class="ri-user-line"></div> -->
         <div id="cart-btn" class="ri-shopping-cart-line"><p id="count">0</p></div> 
-        <!-- <div class="ri-heart-line" id="like-btn"><p id="likecount">0</p></div> -->
-        <div id="login-btn" class="ri-user-line"></div>
+        <div class="ri-heart-line" id="like-btn"><p id="likecount">0</p></div>
      
       </div>
     </header>
 
-    <div class="navbar">
-      <a href="/home">Home</a>
-      <a href="/products">Products</a>
-      <a href="#">About  Us</a>
-      <a href="/contact">Contact Us</a>
-      
+  
+      <!-- header section ends  -->
+  
+      <!-- closer btn  -->
+      <div id="closer" class="ri-close-line"></div>
+  
+      <!-- navbar start  -->
+  
+      <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/products">Products</a>
+        <a href="/about">About  Us</a>
+        <a href="/contact">Contact Us</a>
+        
+      </div>
+  
+      <!-- navbar end  -->
+    
+    <!-- shopping cart start  -->
+ <div class="shopping-cart"  >
+
+
+
+        <div class="shopping-cart1" id="addingtothecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
+        </div>
+       
+       
+        
+        
+        
+        
+        <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+        <a href="#" class="checkoutbtn">checkout</a> 
     </div>
 
 
 
 
 
+ <div class="like-cart"  >
 
+
+
+        <div class="like-cart1" id="addingtothelikecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
+        </div>
+       
+       
+        
+        
+        
+        
+        <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+        <a href="#" class="checkoutbtn">checkout</a> 
+    </div>
+
+
+    <!-- shopping cart end  -->
+
+    <!-- login form start  -->
+    <div class="login-form">
+      <div class="container">
+        <div class="card">
+          <div class="inner-box" id="card">
+            <div class="card-front">
+              <h1>SIGN UP</h1>
+              <form action="/signup" method="post" >
+                <img id="name" src="/name.png" alt="" />
+                <input
+                  type="text"
+                  class="input-box"
+                  placeholder="Your Name"
+                  name="myname"
+                  id="idname"
+                  oninput="validateName(this)"
+                  maxlength="32"
+                  required
+                />              
+
+
+                <img id="email" src="/mail-outline.svg" alt="" />
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  name="myemail"
+                  id="idEmail"
+                  onkeyup="valiemail()"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
+                
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  name="mypassword"
+                  id="idpassword"
+                  required
+                />
+                <img id="pass2" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Confirm Password"
+                  name="myconfirmpassword"
+                  id="idconfirmpassword"
+                  required
+                />
+                <label id="rem">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn" onclick=" return validata()">Sumbit</button>
+                <span id="accountregister">Don't have a account </span>
+                <button type="button" class="btn" onclick="openlogin()" >
+                  Log In
+                </button>
+              </form>
+            </div>
+            <div class="card-back">
+              <h1>LOGIN</h1>
+              <form action="/account"   method="post">
+                <img id="email" src="/mail-outline.svg" alt="" />
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  name="myloginemail"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  name="myloginpass"
+                  required
+                />
+                <label id="remback">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <span id="accountregister">Already have a account </span>
+                <button type="button" onclick="openregister()" class="btn">
+                  Register Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- login form end  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- About 1 - Bootstrap Brain Component -->
     <h1>About us</h1>
-    <!-- About 1 - Bootstrap Brain Component -->
+ 
     <section class="py-3 py-md-5" >
-      <div class="container" >
-        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="About_container"  >
+        <div class="row gy-3 gy-md-4 gy-lg-0 " id="Aayush1">
           <div class="col-12 col-lg-6 col-xl-5">
-            <img
+            <img id="aayush"
               class="img-fluid rounded"
               loading="lazy"
-              src="/image/allthree.jpg"
+              src="image/allthree.jpg"
               alt="About 1"
             />
           </div>
-          <div class="col-12 col-lg-6 col-xl-7">
+          <div class="col-12 col-lg-6 col-xl-7" id="Aayush2">
             <div class="row justify-content-xl-center">
               <div class="col-12 col-xl-11">
                 <h2 class="mb-3" style="color: #31231e">Who Are We?</h2>
 
                 <p ></p>
-                <p class="text" style="color: #31231e" >
+                <p  class="text" style="color: #31231e" >
                   Founded in November of 2023 and based in Udaipur, Rajasthan,
                   Voucher Card is a trusted community marketplace for people to
                   list, discover, and book unique accommodations around the
@@ -78,7 +247,9 @@
                   improve our products and services.
                 </p>
                 <div class="row gy-4 gy-md-0 gx-xxl-5X">
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6" style="display: flex; 
+    margin-top: 3rem;
+">
                     <div class="d-flex">
                       <div class="me-4 text-primary">
                         <svg
@@ -95,6 +266,7 @@
                         </svg>
                       </div>
                       <div>
+                        <div >
                         <h2 class="h4 mb-3" style="color: #31231e">
                           Versatile Brand
                         </h2>
@@ -131,6 +303,7 @@
                         </p>
                       </div>
                     </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -139,41 +312,39 @@
         </div>
       </div>
     </section>
-
-
-
+    <!-- footer section start  -->
 
     <section class="footer">
       <div class="box-container">
         <div class="box">
-          <h3>quick links</h3>
-          <a href="/home"><i class="ri-arrow-right-line" >Home</i></a>
-          <a href="/products"><i class="ri-arrow-right-line"style="text-decoration: none">Products</i></a>
-          <a href="/about"><i class="ri-arrow-right-line">about</i></a>
-          <a href="/contact"><i class="ri-arrow-right-line">contact</i></a>
+          <h3>Quick links</h3>
+          <a href="/home"><i class="ri-arrow-right-line">Home</i></a>
+          <a href="/products"><i class="ri-arrow-right-line">Products</i></a>
+          <a href="/about"><i class="ri-arrow-right-line">About</i></a>
+          <a href="/contact"><i class="ri-arrow-right-line">Contact</i></a>
           
           
         </div>
         <div class="box">
-          <h3>quick links</h3>
-          <a href=""><i class="ri-arrow-right-line">my cart</i></a>
-          <a href="/products" id="wishlisthomefooter" ><i class="ri-arrow-right-line">my wishlist</i></a>
-          <a href="/myaccount"><i class="ri-arrow-right-line">my account</i></a>
+          <h3>My Section</h3>
+          <a id="footermycart" href="#"><i class="ri-arrow-right-line">My cart</i></a>
+          <a href="#" id="footerwishlist" ><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="/myaccount"><i class="ri-arrow-right-line">My account</i></a>
           
-          <a href="#"><i class="ri-arrow-right-line">terms of user</i></a>
+          <a href="#"><i class="ri-arrow-right-line">Terms of user</i></a>
         </div>
         <div class="box">
-          <h3>quick links</h3>
-          <a href="#"><i class="ri-facebook-fill">Facebook</i></a>
-          <a href="#"><i class="ri-twitter-fill">twitter</i></a>
-          <a href="#"><i class="ri-instagram-fill">instagram</i></a>
-          <a href="#"><i class="ri-linkedin-box-fill">linkedin</i></a>
-          <a href="#"><i class="ri-pinterest-fill">pinterest</i></a>
-          <a href="#"><i class="ri-messenger-fill">messenger</i></a>
+          <h3>Social Media</h3>
+          <a href="#"><i class="ri-facebook-fill"> Facebook</i></a>
+          <a href="#"><i class="ri-twitter-fill"> Twitter</i></a>
+          <a href="#"><i class="ri-instagram-fill"> Instagram</i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"> Linkedin</i></a>
+          <a href="#"><i class="ri-pinterest-fill"> Pinterest</i></a>
+          <a href="#"><i class="ri-messenger-fill"> Messenger</i></a>
         </div>
         <div class="box">
-          <h3>newsletter</h3>
-          <p>subscribe for latest updates</p>
+          <h3>Newsletter</h3>
+          <p>Subscribe for latest updates</p>
           <form action="#">
             <input type="email" name="" placeholder="Enter your email" id="" />
             <button type="button" class="sum-btn">Subscribe</button>
@@ -182,9 +353,14 @@
       </div>
     </section>
     <section class="credit">
-      Created by Code with Surendra Kumar || all rights reserved!
+      CREATED BY IETIANS || All Right Reserved!
     </section>
 
+    <!-- footer section end  -->
 
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="js/loginscript.js"></script>
+    <script src="js/product-list.js"></script>
   </body>
 </html>
