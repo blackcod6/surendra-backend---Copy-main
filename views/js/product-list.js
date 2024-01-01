@@ -258,8 +258,8 @@ function renderCart() {
       let shoppingcartitem = document.createElement("div");
       shoppingcartitem.classList.add("box");
       shoppingcartitem.innerHTML += `
+      <i class="ri-close-line close-icon"onclick="removeFromCart(${index})"></i>
        <a style="text-decoration: none"; href="productpage?id=${item.id}">
-          <i class="ri-close-line close-icon"onclick="removeFromCart(${index})"></i>
           <img src=${item.image}>
             <div class="content">
               <h3>${item.title}</h3>
@@ -336,8 +336,8 @@ function renderlikeCart() {
       let likingcartitem = document.createElement("div");
       likingcartitem.classList.add("box");
       likingcartitem.innerHTML += `
+      <i class="ri-close-line close-icon" onclick="removeFromlikeCart(${index})" ></i>
        <a style="text-decoration: none"; href="productpage?id=${item.id}">
-          <i class="ri-close-line close-icon" onclick="removeFromlikeCart(${index})" ></i>
           <img src=${item.image}>
             <div class="content">
               <h3>${item.title}</h3>

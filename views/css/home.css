@@ -447,7 +447,7 @@ section {
     top: 50%;
     right: 1rem;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 3rem;
     color: #5e473e;
     cursor: pointer;
 }
@@ -559,7 +559,7 @@ section {
     top: 50%;
     right: 1rem;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 3rem;
     color: #5e473e;
     cursor: pointer;
 }
@@ -1223,9 +1223,7 @@ form #forgot{
         font-size: 40%;
         overflow-x: hidden;
     }
-    body{
-        
-    }
+    
     .home{
     
     margin: 6rem;

@@ -16,10 +16,12 @@ function getCookie(name) {
 //   alert("your order has been placed succesfully, Thank You ")
 // });
 
+ let total1 = 0;
 // Retrieve cart data from the cookie when loading another page
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
+  let totalamountcheckout = document.getElementById("totalamountcheckout");
   const cartData = getCookie("addcart");
-
+ 
   // Check if cartData exists and use it accordingly
   if (cartData) {
     // Use cartData as needed, e.g., displaying items in the cart
@@ -27,23 +29,30 @@ window.addEventListener("load", () => {
     cartData.forEach((element) => {
       let aayush = document.getElementById("checkoutcartitem");
       aayush.innerHTML += ` <li class="list-group-item d-flex justify-content-between lh-sm" >
-    <div>
-   
-    <h6 class="my-0">${element.title}</h6>
-    <small class="text-body-secondary brief-desc"
-        >Lace-Up Smash Sprint Badminton Shoes</small
-    >
-    </div>
-    <span class="text-body-secondary">${element.price * 10}Rs</span>
+      <div>
+    
+      <h6 class="my-0">${element.title}</h6>
+      <small class="text-body-secondary brief-desc"
+          >Lace-Up Smash Sprint Badminton Shoes</small
+      >
+      </div>
+      <span class="text-body-secondary">${element.price * 10}Rs</span>
 
 
-    </li>
-    `;
+      </li>
+    
+      `;
+
+      total1 += element.price * 10;
+      totalamountcheckout.textContent = `${total1}`;
     });
-
-    // ...
+    console.log(total1);
   }
-});
+})
+  
+  ;
+
+
 
 document.getElementById("checkoutorderbtn").addEventListener("click", function () {
     // Check if the required form fields are filled out
